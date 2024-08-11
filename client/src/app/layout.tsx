@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { DashboardWrapper } from "@/components/DashboardWrapper";
-import { Navbar } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 import "./globals.css";
@@ -20,10 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <DashboardWrapper>
-          <Navbar />
-          {children}
-        </DashboardWrapper>
+        <DashboardWrapper>{children}</DashboardWrapper>
       </body>
     </html>
   );
